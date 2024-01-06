@@ -22,7 +22,7 @@ import PopUpAnimation from '../components/PopUpAnimation';
 import OrderHistoryCard from '../components/OrderHistoryCard';
 import NoNotificationAnimation from '../components/NoNotificationAnimation';
 
-const OrderHistoryScreen = ({navigation}: any) => {
+const NotificationScreen = ({navigation}: any) => {
   const OrderHistoryList = useStore((state: any) => state.OrderHistoryList);
   const tabBarHeight = useBottomTabBarHeight();
   const [showAnimation, setShowAnimation] = useState(false);
@@ -133,4 +133,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OrderHistoryScreen;
+export default NotificationScreen;

@@ -14,6 +14,7 @@ import HeaderBar from '../components/HeaderBar';
 import EmptyListAnimation from '../components/EmptyListAnimation';
 import PaymentFooter from '../components/PaymentFooter';
 import CartItem from '../components/CartItem';
+import NoCartAnimation from '../components/NoCartAnimation';
 
 const CartScreen = ({navigation, route}: any) => {
   const CartList = useStore((state: any) => state.CartList);
@@ -53,7 +54,7 @@ const CartScreen = ({navigation, route}: any) => {
             <HeaderBar title="Cart" />
 
             {CartList.length == 0 ? (
-              <EmptyListAnimation title={'Cart is Empty'} />
+              <NoCartAnimation title={'Cart is Empty'} filename={'../lottie/noCart.json'}/>
             ) : (
               <View style={styles.ListItemContainer}>
                 {CartList.map((data: any) => (

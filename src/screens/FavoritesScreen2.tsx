@@ -13,7 +13,6 @@ import {COLORS, SPACING} from '../theme/theme';
 import HeaderBar from '../components/HeaderBar';
 import EmptyListAnimation from '../components/EmptyListAnimation';
 import FavoritesItemCard from '../components/FavoritesItemCard';
-import NoFavoritesAnimation from '../components/NoFavoritesAnimation';
 
 const FavoritesScreen = ({navigation}: any) => {
   const FavoritesList = useStore((state: any) => state.FavoritesList);
@@ -38,7 +37,7 @@ const FavoritesScreen = ({navigation}: any) => {
             <HeaderBar title="Favourites" />
 
             {FavoritesList.length == 0 ? (
-              <NoFavoritesAnimation title={'No Favourites'} filename={'../lottie/noFavorites.json'} />
+              <EmptyListAnimation title={'No Favourites'} />
             ) : (
               <View style={styles.ListItemContainer}>
                 {FavoritesList.map((data: any) => (
